@@ -1,0 +1,395 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+     <script type="text/javascript" src="js/materialize.min.js"> </script>
+
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<script>
+
+
+  $(document).ready(function(){
+    $('.slider').slider();
+  });
+
+  $(document).ready(function(){
+   $('.sidenav').sidenav();
+ });
+
+ $(document).ready(function(){
+    $('.carousel').carousel();
+  });
+
+</script>
+
+ </head>
+
+ <!--Contenido-->
+
+    <body>
+
+      <nav class="teal darken-4"> <!-- navbar content here  --> </nav>
+        <ul id="slide-out" class="sidenav">
+          <li><div class="user-view">
+            <div class="background">
+              <img src="https://mitsubishi-motors.com.co/blog/wp-content/uploads/2018/01/Motos-vs-carros.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="https://i.pinimg.com/originals/0d/91/c2/0d91c2cfb279ea877d44ebfd7ce107f0.jpg"></a>
+            <a href="#name"><span class="white-text name"></span></a>
+            <a href="#email"><span class="white-text email"></span></a>
+          </div></li>
+          <li><a href="#!"><i class="material-icons">M𐍉τ𐍉Car 2020</i></a></li>
+          <li><a href="#!">Siguenos En Facebook</a></li>
+          <li><div class="divider"></div></li>
+          <li><a class="subheader"></a></li>
+          <li><a class="waves-effect" href="#!">꧁M𐍉τ𐍉Car♛꧂2020®</a></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+      <nav class="teal darken-3">
+        <div class="nav-wrapper">
+      <font color="ffffff" face="black"<a href="#" class="brand-logo">
+꧁M𐍉τ𐍉♛Car꧂®
+ </a></font>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="ClasicosyModernos.html">Clasicos y Modernos</a></li>
+              <li><a href="Contacto.html">Contactanos</a></li>
+              <li><a href="index.html.html">Inicio</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <p>
+
+
+
+        </p>
+
+     <nav class=" teal darken-2">
+      <div class="nav-wrapper">
+        <form>
+          <div class="input-field">
+            <input id="search" type="search" required>
+            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+            <i class="material-icons">close</i>
+          </div>
+        </form>
+      </div>
+    </nav>
+    <p>
+
+
+    </p>
+
+    <meta charset = "utf-8">
+    <title> Contactanos</title>
+    <script language = "Javascript">
+
+     function validarFormulario(){
+
+
+    var txtNombre = document.getElementById('nombre').value;
+
+    var txtDireccion = document.getElementById('direccion').value;
+
+    var txtEdad = document.getElementById('edad').value;
+
+    var txtTelefono = document.getElementById('telefono').value;
+
+    var txtCorreo = document.getElementById('correo').value;
+
+    var txtFecha = document.getElementById('fecha').value;
+
+    var cmbSelector = document.getElementById('selector').selectedIndex;
+
+    var rbtEstado = document.getElementsByName('radioButton');
+    var banderaRBTN = false;
+
+
+     //Test campo obligatorio
+
+     if(txtNombre == null || txtNombre.length == 0 || /^\s+$/.test(txtNombre)){
+
+      alert('ERROR: Debe escribir un nombre valido');
+
+        return false;
+        }
+
+
+
+
+     //Test edad
+
+    if(txtEdad == null || txtEdad.length == 0 || isNaN(txtEdad)){
+
+     alert('ERROR: Debe ingresar una edad');
+
+     return false;
+        }
+
+
+
+    // test Direccion
+     if(txtDireccion == null || txtDireccion.length == 0 || /^\s+$/.test(txtDireccion)){
+
+      alert('ERROR: Debe escribir una direccion valida');
+
+        return false;
+        }
+
+
+
+     //Test telefono
+    if(txtTelefono == null || txtTelefono.length == 0 || isNaN(txtTelefono)){
+
+     alert('ERROR: Debe ingresar un telefono valido');
+
+     return false;
+        }
+
+
+
+     //Test correo
+
+      if(!(/\S+@\S+\.\S+/.test(txtCorreo))){
+
+        alert('ERROR: Debe escribir un correo valido');
+
+       return false;
+        }
+
+
+
+     //Test fecha
+
+        if(!isNaN(txtFecha)){
+
+      alert('ERROR: Debe elegir una fecha');
+
+       return false;
+        }
+
+
+
+        //Test comboBox
+
+      if(cmbSelector == null || cmbSelector == 0){
+
+       alert('ERROR: Debe seleccionar un estado');
+
+      return false;
+        }
+
+
+
+    //test radio
+    for(var i = 0; i < rbtEstado.length; i++){
+
+        if(rbtEstado[i].checked){
+
+         banderaRBTN = true;
+
+        break;
+          }
+
+      }
+
+      if(!banderaRBTN){
+
+        alert('ERROR: Debe elegir una ocupacion');
+
+     return false;
+        }
+     return true;
+      }
+
+    </script>
+
+
+    </ul>
+    </nav>
+    </header>
+    <section id = "main-content">
+    <article>
+    <header>
+    <h1><center> Contactanos</h1>
+    </header>
+    <center>
+    <form action=" " onsubmit="return validarFormulario()">
+
+    <label for = "nombre">
+
+    <span>Nombre:</span>
+
+    </label>
+
+    <input id="nombre" name="nombre" type="text">
+
+
+    <br><br>
+
+
+
+    <label for="edad">
+
+    <span>Edad:</span>
+
+    </label>
+
+    <input id="edad" name="edad" type="text">
+
+
+    <br><br>
+
+
+
+
+    <label for="fecha">
+
+    <span>Fecha de Nacimiento:</span>
+
+    </label>
+
+    <input id="fecha" name="fecha" type="date">
+
+
+    <br><br>
+
+    <label for = "direccion">
+
+    <span>Direccion:</span>
+
+    </label>
+
+    <input id="direccion" name="direccion" type="text">
+
+
+    <br><br>
+
+
+
+    <label for="telefono">
+
+    <span>Telefono:</span>
+
+    </label>
+
+    <input id="telefono" name="telefono" type="text">
+
+
+    <br><br>
+
+
+
+    <label for="correo">
+
+    <span>Correo electronico:</span>
+
+    </label>
+
+    <input id="correo" name="correo" type="text">
+
+
+    <br><br>
+
+
+
+    <label for="Ciudad">
+
+    <span> Ciudad:</span>
+
+    </label>
+
+  <input id="Ciudad" name="Ciudad" type="text">
+
+  <br><br>
+
+
+
+    <label for="Ocupacion">
+
+    <span> Ocupacion:</span>
+  </label>
+
+  <input id="" name="Ocupacion" type="text">
+
+    <br>
+
+    </br>
+
+    <label for="comentarios">
+
+    <span>Comentarios:</span>
+
+    </label>
+
+    <br>
+
+    <textarea = "Comentarios" rows = "10" cols = "40"> Escriba aqui los comentarios. </textarea>
+    <br><br>
+
+
+
+    <input type="submit" value="Enviar">
+    <input type = "button" value = "Imprimir" onclick = "window.print()">
+
+    </div>
+    </section>
+    <footer id = "main-footer">
+    </center>
+    </footer>
+
+    <p>
+
+
+    </p>
+
+    <div>
+      <footer class="teal darken-4">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12">
+                    <h3 class="white-text"></h3>
+                    <p class="grey-text text-lighten-4"></p>
+                  </div>
+                  <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text"></h5>
+                    <ul>
+                      <li><a class="grey-text text-lighten-3" href="#!">© 2020 ꧁M𐍉τ𐍉♛Car꧂®</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container">
+                </div>
+              </div>
+            </footer>
+
+  <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js">
+$(document).ready(function(){
+    $('.parallax').parallax();
+  });
+
+</script>
+    </body>
+  </html>
